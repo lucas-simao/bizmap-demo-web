@@ -1,0 +1,10 @@
+# BizMap workspace: this repo (..) plus the sibling repo, which CI checks out
+# into .bizmap/api. Scanning both together links the web's HTTP calls to the
+# api routes and both repos' use of the shared Firestore collection.
+name: shop
+database: shop
+repos:
+  - ..
+  - api
+services:
+  api: { env: VITE_API_URL }

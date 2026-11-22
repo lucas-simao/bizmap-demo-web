@@ -1,0 +1,19 @@
+{
+  "name": "bizmap-demo-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Storefront for the fictitious Northwind Outfitters shop (BizMap demo).",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "firebase": "^11.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0"
+  }
+}

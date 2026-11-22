@@ -1,0 +1,21 @@
+name: BizMap impact
+on: pull_request            # not pull_request_target: never run PR code with a write token
+permissions:
+  contents: read
+  pull-requests: write
+concurrency:                # two quick pushes must not race to create two comments
+  group: bizmap-impact-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  bizmap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The sibling repo, so the comment shows what crosses the repo boundary.
+      - uses: actions/checkout@v4
+        with:
+          repository: lucas-simao/bizmap-demo-api
+          path: .bizmap/api
+      - uses: lucas-simao/bizmap@042d26fbe7e0a53eea85e7817c6b0953d44cabd4 # v0.14.1
+        with:
+          path: .bizmap      # workspace: this repo + bizmap-demo-api

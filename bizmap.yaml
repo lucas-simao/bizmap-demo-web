@@ -1,0 +1,8 @@
+# BizMap config for this repository (all keys optional).
+name: web
+database: shop          # same value as the api repo: shared Firestore collection ids
+services:
+  api: { env: VITE_API_URL }   # VITE_API_URL points at bizmap-demo-api
+exclude:
+  - node_modules
+  - .bizmap
