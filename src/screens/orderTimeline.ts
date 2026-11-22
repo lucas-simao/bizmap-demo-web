@@ -33,3 +33,9 @@ export async function loadOrder(orderId: string) {
   const { data } = await api.get(`/orders/${orderId}`);
   return data as { id: string; status: string; total_cents: number };
 }
+
+// loadShipment shows the carrier and tracking link once the order shipped.
+export async function loadShipment(orderId: string) {
+  const { data } = await api.get(`/orders/${orderId}/shipment`);
+  return data as { carrier: string; tracking_code: string };
+}
