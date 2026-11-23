@@ -20,7 +20,7 @@ jobs:
           repository: lucas-simao/bizmap-demo-api
           path: .bizmap/api
       # On push the Action skips the impact and only writes the graph page.
-      - uses: lucas-simao/bizmap@612cc8f5ef313c5ee9de7d254b3ed91cf2949da7 # v0.17.0
+      - uses: lucas-simao/bizmap@033069db4aa49aaf53cb9aa04fc222b8b9c977cf # v0.17.1
         with:
           path: .bizmap
           html: _site/index.html
