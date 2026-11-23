@@ -38,7 +38,7 @@ flowchart LR
 ## Try it locally
 
 ```bash
-pip install bizmap==0.16.0
+pip install bizmap==0.16.1
 git clone https://github.com/lucas-simao/bizmap-demo-web && cd bizmap-demo-web
 git clone https://github.com/lucas-simao/bizmap-demo-api .bizmap/api
 bizmap scan .bizmap --out bizmap.graph.json        # both repos together
