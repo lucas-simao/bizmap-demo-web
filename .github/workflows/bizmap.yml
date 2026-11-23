@@ -16,6 +16,6 @@ jobs:
         with:
           repository: lucas-simao/bizmap-demo-api
           path: .bizmap/api
-      - uses: lucas-simao/bizmap@1af8e5e4a014f56a132304ad36356739caa17037 # v0.16.1
+      - uses: lucas-simao/bizmap@679eb9830c44e2f5e37b2d2096c96fdfd43e2cf0 # v0.16.2
         with:
           path: .bizmap      # workspace: this repo + bizmap-demo-api
